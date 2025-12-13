@@ -1,44 +1,59 @@
 #include "push_swap.h"
 
-char	*get_next_word(char *argv[i], token_counter);
+char	*ft_strtok(char *arg)
 {
+	int		i;
+
+	i = 0;
+	while (arg[i])
+	{
+		if (arg[i] >= 7 && arg[i] <= 13 || arg[i] == 32)
+			i++;
+		else if 
 	
 }
 
-t_list	stack_creator(char *argv)
+
+
+void	str_manager(char *arg);
 {
-	static char	*token_counter;
-	char		**head;
-	t_list		node;
+	static char *s_buffer;
+	char		*token;
 	int			i;
 
-	token_counter = 0;
+	i = 0;
+	while (arg[i++])
+	{
+		while (arg[i][j++])
+		{
+			if (arg[i] >= 7 && arg[i] <= 13 || arg[i] == 32)
+			{
+				while (token != NULL)
+				{
+					token = ft_strtok(arg[i]);
+					tmp_lst_creator(token);
+				}
+			else
+				tmp_lst_creator(arg[i])
+		}
+		i++;
+	}
+}
+
+t_list	tmp_lst_creator(char *argv)
+{
+	char		**head;
+	char		*next;
+	char		*prev;
+	t_lis		node;
+	int			i;
+
 	while(argv[i][0])
-	node.content = get_next_word(argv[i], token_counter);
-	node.index = get_index(node.content, token_counter)
+	{
+		node.content = get_next_nbr(argv[i]);
+		node.index = get_index(node.content, token_counter)
 	if (!node.content)
 		return (0);
 	node.next = NULL;
 	i++;
 }
-
-int	main()
-{
-
-
-	while (argv[i])
-	{
-		while (argv[i][j])
-		{
-			if (argv[i][j] == ' ')
-			{
-				while (node)
-					token = node_creator(ft_strtok(argv[i]));
-			}
-			else
-			
-			j++;
-		}
-	}
-}
-
