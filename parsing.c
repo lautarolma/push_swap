@@ -17,21 +17,29 @@ char	*ft_strtok(char *arg)
 
 void	str_manager(char *arg);
 {
-	static char *s_buffer;
 	char		*token;
+	char		*delim;
+	t_list		*head;
+	t_list		new_node;
 	int			i;
 
+	head = NULL;
 	i = 0;
 	while (arg[i++])
 	{
 		while (arg[i][j++])
 		{
-			if (arg[i] >= 7 && arg[i] <= 13 || arg[i] == 32)
+			if(ft_strchr(arg[i][j]))
 			{
+					*token = ft_strtok(arg[i], delim);
+					head = token;
+			}
 				while (token != NULL)
 				{
-					token = ft_strtok(arg[i]);
-					tmp_lst_creator(token);
+					*token = ft_strtok(arg[i]);
+					new_node.content = strdup(token);
+					token = NULL;
+					:w
 				}
 			else
 				tmp_lst_creator(arg[i])
