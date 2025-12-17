@@ -1,67 +1,77 @@
 #include "push_swap.h"
+#include "libft.h"
 
-char	*ft_strtok(char *arg)
-{
-	int		i;
-
-	i = 0;
-	while (arg[i])
-	{
-		if (arg[i] >= 7 && arg[i] <= 13 || arg[i] == 32)
-			i++;
-		else if 
-	
-}
-
-
-
+//1-Rebuild str_manager with the alocation correct for the int result of atoi_safe.
+//2-build a strchr with a string as second parameter
+//3-Cc and run strtok with a tester from AI and implement to the program here.
+//
 void	str_manager(char *arg);
 {
-	char		*token;
-	char		*delim;
+	char		*p_token;
+	char		*c_token;
 	t_list		*head;
 	t_list		new_node;
-	int			i;
 
 	head = NULL;
 	i = 0;
-	while (arg[i++])
-	{
-		while (arg[i][j++])
-		{
-			if(ft_strchr(arg[i][j]))
-			{
-					*token = ft_strtok(arg[i], delim);
-					head = token;
-			}
-				while (token != NULL)
-				{
-					*token = ft_strtok(arg[i]);
-					new_node.content = strdup(token);
-					token = NULL;
-					:w
-				}
-			else
-				tmp_lst_creator(arg[i])
-		}
-		i++;
+	*p_token = ft_strtok(arg[i], delim);
+	if (ft_atoi_safe(p_token))
+		c_token = ft_atoi_safe(p_token);
+	if (!c_token)
+		return (NULL);
+	head = ft_lstnew(c_token);1
+		if (!head)
+			return (NULL);
 	}
+	while (p_token != NULL)
+	{
+		*p_token = ft_strtok(NULL, delim);
+		add_back = strdup(token);
+		token = NULL;
+	}
+	else
+		tmp_lst_creator(arg[i])
+	}
+	i++;
 }
 
-t_list	tmp_lst_creator(char *argv)
+t_list	*ft_lstnew(void *content)
 {
-	char		**head;
-	char		*next;
-	char		*prev;
-	t_lis		node;
-	int			i;
+	t_list	*new_node;
 
-	while(argv[i][0])
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
+}
+
+int	ft_atoi_safe(const char *s)
+{
+	int		sign;
+	long	nmb;
+
+	if (!s || !*s)
+		return (-1);
+	sign = 1;
+	if ((*s == '+' || *s == '-'))
 	{
-		node.content = get_next_nbr(argv[i]);
-		node.index = get_index(node.content, token_counter)
-	if (!node.content)
-		return (0);
-	node.next = NULL;
-	i++;
+		if (!ft_isdigit(*(s + 1))
+			return (-1);
+		if (*s == '-')
+			sign = -1;
+	}
+	nmb = 0;
+	while (*s)
+	{
+		if (!ft_isdigit(*s))
+			return (-1);
+		nmb = nmb * 10 + (*s - '0');
+		if (sign == -1 && -nmb < INT_MIN 
+			|| sign == 1 && nmb > INT_MAX)
+			return (-1);
+		s++;
+	}
+	return ((int)(nmb * sign));
 }
