@@ -4,7 +4,7 @@
 //1-Rebuild str_manager with the alocation correct for the int result of atoi_safe.
 //2-build a strchr with a string as second parameter
 //3-Cc and run strtok with a tester from AI and implement to the program here.
-//
+
 void	str_manager(char *arg);
 {
 	char		*p_token;
@@ -53,12 +53,12 @@ int	ft_atoi_safe(const char *s)
 	long	nmb;
 
 	if (!s || !*s)
-		return (-1);
+		return (0);
 	sign = 1;
 	if ((*s == '+' || *s == '-'))
 	{
 		if (!ft_isdigit(*(s + 1))
-			return (-1);
+			return (0);
 		if (*s == '-')
 			sign = -1;
 	}
@@ -66,12 +66,21 @@ int	ft_atoi_safe(const char *s)
 	while (*s)
 	{
 		if (!ft_isdigit(*s))
-			return (-1);
+			return (0);
 		nmb = nmb * 10 + (*s - '0');
 		if (sign == -1 && -nmb < INT_MIN 
 			|| sign == 1 && nmb > INT_MAX)
-			return (-1);
+			return (0);
 		s++;
 	}
 	return ((int)(nmb * sign));
+}
+
+char	*arg_manager(char	**argv)
+{
+	while (argv[i])
+	{
+		if (ft_strchr_str(argv[i]))
+		i++;
+	}
 }
