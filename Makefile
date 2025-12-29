@@ -14,8 +14,7 @@ CFLAGS      = -Wall -Wextra -Werror
 LIBFT_DIR   = ./libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 
-SRCS        = push_swap.c ft_strpbrk.c ft_strtok.c \
-              # Añade aquí el resto de tus .c (sort.c, utils.c, etc.)
+SRCS        = push_swap.c parsing.c 
 
 OBJS        = $(SRCS:.c=.o)
 # == Colores =================================================================== #
