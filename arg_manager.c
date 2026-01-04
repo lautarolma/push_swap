@@ -5,12 +5,9 @@
 //2-build a strchr with a string as second parameter
 //3-Cc and run strtok with a tester from AI and implement to the program here.
 
-void	str_manager(char *arg);
+int	tokenizer(char *arg);
 {
-	char		*p_token;
 	char		*c_token;
-	t_list		*head;
-	t_list		new_node;
 
 	head = NULL;
 	i = 0;
@@ -47,7 +44,7 @@ t_list	*ft_lstnew(void *content)
 	return (new_node);
 }
 
-int	ft_atoi_safe(const char *s)
+int	ft_atoi_safe(const char *s, bool *error)
 {
 	int		sign;
 	long	nmb;
@@ -56,22 +53,19 @@ int	ft_atoi_safe(const char *s)
 		return (0);
 	sign = 1;
 	if ((*s == '+' || *s == '-'))
-	{
-		if (!ft_isdigit(*(s + 1))
-			return (0);
-		if (*s == '-')
+		if (*s++ == '-')
 			sign = -1;
-	}
+	if (!*s)
+		return (*error = true, 0);
 	nmb = 0;
 	while (*s)
 	{
 		if (!ft_isdigit(*s))
-			return (0);
-		nmb = nmb * 10 + (*s - '0');
+			return (*error = true, 0);
+		nmb = nmb * 10 + (*s++ - '0');
 		if (sign == -1 && -nmb < INT_MIN 
 			|| sign == 1 && nmb > INT_MAX)
-			return (0);
-		s++;
+			return (*error = true, write(2, "Number out of range\n", 20), 0);
 	}
 	return ((int)(nmb * sign));
 }

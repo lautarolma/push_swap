@@ -14,8 +14,12 @@ CFLAGS      = -Wall -Wextra -Werror
 LIBFT_DIR   = ./libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 
+<<<<<<< HEAD
 SRCS        = push_swap.c parsing.c 
 
+=======
+SRCS        = arg_manager.c push_swap.c push_swap.h
+>>>>>>> 83eb337 (back at 42)
 OBJS        = $(SRCS:.c=.o)
 # == Colores =================================================================== #
 
@@ -31,7 +35,7 @@ $(NAME): $(OBJS) $(LIBFT)
 	@$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 	@echo "$(GREEN)$(NAME) compilado.$(RESET)"
 
-# Compila la libft llamando a su propio Makefile
+# Compila la libft llamando a su propio Makefile utilizando el flag -C
 $(LIBFT):
 	@$(MAKE) -C $(LIBFT_DIR)
 
