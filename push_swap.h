@@ -9,19 +9,19 @@
 # include <stdbool.h>
 # include "libft/libft.h"
 
-typedef struct s_list
+typedef struct s_stack
 {
 	int				content;
 	int				index;
-	struct s_list	*next;
-} t_list;
+	struct s_stack	*next;
+} t_stack;
 
 int			ft_atoi_safe(const char *s, bool *error);
-bool		is_duplicated(t_list *stack_a, int value);
-void		str_manager(char *argv, t_list **stack_a, char *delim);
-void		exit_with_error(t_list **stack_a);
-void		ft_lstadd_back(t_list **lst, t_list *new);
-t_list		*ft_lstnew(int content);
+bool		is_duplicated(t_stack *stack_a, int value);
+void		str_manager(char *argv, t_stack **stack_a, char *delim);
+void		exit_with_error(t_stack **stack_a);
+void		ft_snode_add_back(t_stack **lst, t_stack *new);
+t_stack		*ft_snode_new(int content);
 
 
 #endif

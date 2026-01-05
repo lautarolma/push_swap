@@ -1,10 +1,10 @@
-#include "libft.h"
+#include "push_swap.h"
 
-t_list	*ft_lstnew(int content)
+t_stack	*ft_snode_new(int content)
 {
-	t_list	*new_node;
+	t_stack	*new_node;
 
-	new_node = (t_list *)malloc(sizeof(t_list));
+	new_node = (t_stack *)malloc(sizeof(t_stack));
 	if (!new_node)
 		return (NULL);
 	new_node->content = content;
@@ -13,9 +13,9 @@ t_list	*ft_lstnew(int content)
 	return (new_node);
 }
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_snode_add_back(t_stack **lst, t_stack *new)
 {
-	t_list	*last;
+	t_stack	*last;
 
 	if (!lst || !new)
 		return ;

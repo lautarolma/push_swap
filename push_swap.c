@@ -6,13 +6,14 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 04:48:58 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/05 04:37:45 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/05 16:23:53 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "libft/libft.h"
 
-void	print_stack(t_list *head)
+void	print_stack(t_stack *head)
 {
 	printf("Stack A: ");
 	if (!head)
@@ -27,7 +28,7 @@ void	print_stack(t_list *head)
 
 int	main(int argc, char *argv[])
 {
-	t_list	*stack_a = NULL;
+	t_stack	*stack_a = NULL;
 	char	*delim = " ,";
 	int i;
 

@@ -27,7 +27,7 @@ int	ft_atoi_safe(const char *s, bool *error)
 	return ((int)(nmb * sign));
 }
 
-bool	is_duplicated(t_list *stack_a, int nb)	
+bool	is_duplicated(t_stack *stack_a, int nb)	
 {
 	while (stack_a)
 	{
@@ -38,7 +38,7 @@ bool	is_duplicated(t_list *stack_a, int nb)
 	return (false);
 }
 
-void	str_manager(char *argv, t_list **stack_a, char *delim)
+void	str_manager(char *argv, t_stack **stack_a, char *delim)
 {
 	char		*token;
 	int			nb;
@@ -54,7 +54,7 @@ void	str_manager(char *argv, t_list **stack_a, char *delim)
 			if (is_duplicated(*stack_a, nb))
 				error = true;
 			else
-				ft_lstadd_back(stack_a, ft_lstnew(nb));
+				ft_snode_add_back(stack_a, ft_snode_new(nb));
 		}
 		token = ft_strtok(NULL, delim);
 	}
@@ -62,10 +62,10 @@ void	str_manager(char *argv, t_list **stack_a, char *delim)
 		exit_with_error(stack_a);
 }
 
-void	exit_with_error(t_list **stack_a)
+void	exit_with_error(t_stack **stack_a)
 {
-	t_list	*tmp;
-	t_list	*current;
+	t_stack	*tmp;
+	t_stack	*current;
 
 	if (stack_a == NULL || *stack_a == NULL)
     {
