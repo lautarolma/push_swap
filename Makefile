@@ -7,19 +7,15 @@
 
 NAME        = push_swap
 CC          = cc
-CFLAGS      = -Wall -Wextra -Werror
+CFLAGS      = -Wall -Wextra -Werror -I. -I$(LIBFT_DIR)
 
 # == Sources ================================================================= #
 
 LIBFT_DIR   = ./libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 
-<<<<<<< HEAD
-SRCS        = push_swap.c parsing.c 
+SRCS        = push_swap.c arg_parse.c utils.c
 
-=======
-SRCS        = arg_manager.c push_swap.c push_swap.h
->>>>>>> 83eb337 (back at 42)
 OBJS        = $(SRCS:.c=.o)
 # == Colores =================================================================== #
 
@@ -28,14 +24,14 @@ RESET       = \033[0m
 
 # == Rules =================================================================== #
 
-all: $(NAME)
+all: $(LIBFT) $(NAME)
 
 # La regla NAME depende de los objetos Y de la librería
 $(NAME): $(OBJS) $(LIBFT)
 	@$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 	@echo "$(GREEN)$(NAME) compilado.$(RESET)"
 
-# Compila la libft llamando a su propio Makefile utilizando el flag -C
+# Compila la libft llamando a su propio Makefile
 $(LIBFT):
 	@$(MAKE) -C $(LIBFT_DIR)
 

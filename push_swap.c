@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 04:48:58 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/04 05:21:51 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/05 04:37:45 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	print_stack(t_list *head)
 		printf("(vacío)");
 	while (head)
 	{
-		printf("[%d] ", head->value);
+		printf("[%d] ", head->content);
 		head = head->next;
 	}
 	printf("\n");
@@ -27,15 +27,16 @@ void	print_stack(t_list *head)
 
 int	main(int argc, char *argv[])
 {
-	t_list *stack_a = NULL;
+	t_list	*stack_a = NULL;
+	char	*delim = " ,";
 	int i;
 
 	i = 1;
 	if (argc < 2)
 		return (0);
-	while (i < ac)
+	while (i < argc)
 	{
-		str_manager(argv[i], &stack_a);
+		str_manager(argv[i], &stack_a, delim);
 		i++;
 	}
 	print_stack(stack_a);
