@@ -46,6 +46,8 @@ void	str_manager(char *argv, t_stack **stack_a, char *delim)
 
 	error = false;
 	token = ft_strtok(argv, delim);
+	if (!token)
+		error = true;
 	while (token != NULL && !error)
 	{
 		nb = ft_atoi_safe(token, &error);

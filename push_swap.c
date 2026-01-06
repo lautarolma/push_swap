@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 04:48:58 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/05 16:23:53 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/06 07:15:00 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	print_stack(t_stack *head)
 int	main(int argc, char *argv[])
 {
 	t_stack	*stack_a = NULL;
-	char	*delim = " ,";
+	char	*delim = " ";
 	int i;
 
 	i = 1;

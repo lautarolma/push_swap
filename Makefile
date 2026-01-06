@@ -33,7 +33,7 @@ $(NAME): $(OBJS) $(LIBFT)
 
 # Compila la libft llamando a su propio Makefile
 $(LIBFT):
-	@$(MAKE) -C $(LIBFT_DIR)
+	@$(MAKE) -C $(LIBFT_DIR) -s
 
 # Regla genérica para compilar .c en .o (evita relinking)
 %.o: %.c
@@ -41,13 +41,13 @@ $(LIBFT):
 
 clean:
 	@rm -f $(OBJS)
-	@$(MAKE) -C $(LIBFT_DIR) clean
+	@$(MAKE) -C $(LIBFT_DIR) clean -s
 	@echo "Objetos eliminados."
 
 fclean: clean
 	@rm -f $(NAME)
-	@$(MAKE) -C $(LIBFT_DIR) fclean
-	@echo "Ejecutable y librerías eliminados."
+	@$(MAKE) -C $(LIBFT_DIR) fclean -s
+	@echo "Ejecutable y librerías eliminados."	
 
 re: fclean all
 
