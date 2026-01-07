@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 04:48:58 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/06 07:15:00 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/07 16:41:40 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	print_stack(t_stack *head)
 		printf("(vacío)");
 	while (head)
 	{
-		printf("[%d] ", head->content);
+		printf("Value[%d] Index[%d]\n", head->value, head->index);
 		head = head->next;
 	}
 	printf("\n");
@@ -40,6 +40,7 @@ int	main(int argc, char *argv[])
 		str_manager(argv[i], &stack_a, delim);
 		i++;
 	}
+	ft_nodes_index(stack_a);
 	print_stack(stack_a);
 	return (0);
 }

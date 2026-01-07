@@ -11,17 +11,19 @@
 
 typedef struct s_stack
 {
-	int				content;
+	int				value;
 	int				index;
 	struct s_stack	*next;
 } t_stack;
 
+int			ft_stack_size(t_stack *stack);
 int			ft_atoi_safe(const char *s, bool *error);
 bool		is_duplicated(t_stack *stack_a, int value);
 void		str_manager(char *argv, t_stack **stack_a, char *delim);
 void		exit_with_error(t_stack **stack_a);
 void		ft_snode_add_back(t_stack **lst, t_stack *new);
+void		ft_nodes_index(t_stack *stack);
 t_stack		*ft_snode_new(int content);
-
+t_stack		*get_next_min(t_stack *stack);
 
 #endif

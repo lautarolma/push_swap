@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/07 15:37:35 by laviles           #+#    #+#             */
+/*   Updated: 2026/01/07 16:35:25 by laviles          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-t_stack	*ft_snode_new(int content)
+t_stack	*ft_snode_new(int nb)
 {
 	t_stack	*new_node;
 
 	new_node = (t_stack *)malloc(sizeof(t_stack));
 	if (!new_node)
 		return (NULL);
-	new_node->content = content;
+	new_node->value = nb;
 	new_node->index = -1;
 	new_node->next = NULL;
 	return (new_node);
@@ -28,4 +40,19 @@ void	ft_snode_add_back(t_stack **lst, t_stack *new)
 	while (last->next)
 		last = last->next;
 	last->next = new;
+}
+
+int		ft_stack_size(t_stack *stack)
+{
+	int		size;
+
+	if (!stack)
+		return (0);
+	size = 0;
+	while (stack)
+	{
+		size++;
+		stack = stack->next;
+	}
+	return (size);
 }

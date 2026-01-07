@@ -14,7 +14,7 @@ CFLAGS      = -Wall -Wextra -Werror -I. -I$(LIBFT_DIR)
 LIBFT_DIR   = ./libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 
-SRCS        = push_swap.c arg_parse.c utils.c
+SRCS        = push_swap.c arg_parse.c utils.c errors.c index.c
 
 OBJS        = $(SRCS:.c=.o)
 # == Colores =================================================================== #

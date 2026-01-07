@@ -1,0 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   errors.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/07 15:41:33 by laviles           #+#    #+#             */
+/*   Updated: 2026/01/07 15:41:38 by laviles          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
+
+void	exit_with_error(t_stack **stack_a)
+{
+	t_stack	*tmp;
+	t_stack	*current;
+
+	if (stack_a == NULL || *stack_a == NULL)
+    {
+        write(2, "Error\n", 6);
+        exit(1);
+    }
+	current = *stack_a;
+	while (current)
+	{
+		tmp = current->next;
+		free(current);
+		current = tmp;
+	}
+	*stack_a = NULL;
+	write(2, "Error\n", 6);
+	exit(1);
+}

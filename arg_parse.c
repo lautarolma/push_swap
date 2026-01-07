@@ -31,7 +31,7 @@ bool	is_duplicated(t_stack *stack_a, int nb)
 {
 	while (stack_a)
 	{
-		if (stack_a->content == nb)
+		if (stack_a->value == nb)
 			return (true);
 		stack_a = stack_a->next;
 	}
@@ -62,26 +62,4 @@ void	str_manager(char *argv, t_stack **stack_a, char *delim)
 	}
 	if (error)
 		exit_with_error(stack_a);
-}
-
-void	exit_with_error(t_stack **stack_a)
-{
-	t_stack	*tmp;
-	t_stack	*current;
-
-	if (stack_a == NULL || *stack_a == NULL)
-    {
-        write(2, "Error\n", 6);
-        exit(1);
-    }
-	current = *stack_a;
-	while (current)
-	{
-		tmp = current->next;
-		free(current);
-		current = tmp;
-	}
-	*stack_a = NULL;
-	write(2, "Error\n", 6);
-	exit(1);
 }
