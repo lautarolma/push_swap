@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 04:48:58 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/08 21:48:13 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/09 12:42:59 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	print_stack(t_stack *head)
 	int		i;
 
 	i = 0;
-	printf("Stack A:\n");
+	printf("Stack :\n");
 	if (!head)
 		printf("(vacío)");
 	while (head)
@@ -48,12 +48,25 @@ int	main(int argc, char *argv[])
     ft_snode_add_back(&stack_b, ft_snode_new(20));
     ft_snode_add_back(&stack_b, ft_snode_new(30));
 	ft_nodes_index(stack_a);
+	ft_nodes_index(stack_b);
+	printf(" ########################################################################################################### \n");
+	printf(" 																						\n");
+	printf(" 							SWAP													\n");
+	printf("                                                                                        \n");
+	printf(" ########################################################################################################### \n");
 	print_stack(stack_a);
-	sa(&stack_a);
+	print_stack(stack_b);
+	printf(" ########################################################################################################### \n");
+	printf(" 																											 \n");
+	printf("			 				PUSH													 \n");
+	printf("                                                                                                           	 \n");
+	printf(" ########################################################################################################### \n");
+	pa(&stack_a, &stack_b);
 	print_stack(stack_a);
-	sb(&stack_b);
+	print_stack(stack_b);
+	pb(&stack_a, &stack_b);
 	print_stack(stack_a);
-	ss(&stack_a, &stack_b);
+	print_stack(stack_b);
 	return (0);
 }
 
