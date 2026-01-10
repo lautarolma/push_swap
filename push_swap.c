@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 04:48:58 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/09 12:42:59 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/10 13:51:26 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,24 +51,28 @@ int	main(int argc, char *argv[])
 	ft_nodes_index(stack_b);
 	printf(" ########################################################################################################### \n");
 	printf(" 																						\n");
-	printf(" 							SWAP													\n");
+	printf(" 							Stacks													\n");
 	printf("                                                                                        \n");
 	printf(" ########################################################################################################### \n");
 	print_stack(stack_a);
 	print_stack(stack_b);
 	printf(" ########################################################################################################### \n");
 	printf(" 																											 \n");
-	printf("			 				PUSH													 \n");
+	printf("			 				ROTATE													 \n");
 	printf("                                                                                                           	 \n");
 	printf(" ########################################################################################################### \n");
-	pa(&stack_a, &stack_b);
+	rra(&stack_a);
+	print_stack(stack_a);
+	rrb(&stack_b);
+	print_stack(stack_b);
+	rrr(&stack_a, &stack_b);
 	print_stack(stack_a);
 	print_stack(stack_b);
-	pb(&stack_a, &stack_b);
-	print_stack(stack_a);
-	print_stack(stack_b);
+
 	return (0);
 }
 
-// los llamados a las funciones no son adecuados, acabo de cambiar un segundo llamado de stack_a por el primer llamado a swap del stack_b.
-// los prints tambien estan incorrectos, tengo que corregir esto para verificar.
+//1- Control de errores completo. Pendiente de modifi int overflows "Wrong Message".
+//2- Estructuracion de la logica algoritmica:
+// calcular "ventanas"/rangos de K(valor matematico) segun numero de enteros def if size <= 100 k = 15 / 18, else if
+//calcular max index position. get_max_pos

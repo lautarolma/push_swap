@@ -30,6 +30,14 @@ void		ft_swap(t_stack **stack);
 void		sa(t_stack **stack_a);
 void		sb(t_stack **stack_b);
 void		ss(t_stack **stack_a, t_stack **stack_b);
+void		rotate(t_stack **stack);
+void		ra(t_stack **stack_a);
+void		rb(t_stack **stack_b);
+void		rr(t_stack **stack_a, t_stack **stack_b);
+void		rev_rotate(t_stack **stack);
+void		rra(t_stack **stack_a);
+void		rrb(t_stack **stack_b);
+void		rrr(t_stack **stack_a, t_stack **stack_b);
 t_stack		*ft_snode_new(int content);
 t_stack		*get_next_min(t_stack *stack);
 
