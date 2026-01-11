@@ -7,14 +7,14 @@
 
 NAME        = push_swap
 CC          = cc
-CFLAGS      = -Wall -Wextra -Werror -I. -I$(LIBFT_DIR)
+CFLAGS      = -Wall -Wextra -Werror -I. -I$(LIBFT_DIR) -g3
 
 # == Sources ================================================================= #
 
 LIBFT_DIR   = ./libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 
-SRCS        = push_swap.c arg_parse.c utils.c errors.c index.c push.c swap.c rotate.c rev_rotate.c
+SRCS        = push_swap.c arg_parse.c utils.c errors.c index.c push.c swap.c rotate.c rev_rotate.c k-sort.c
 
 OBJS        = $(SRCS:.c=.o)
 # == Colores =================================================================== #

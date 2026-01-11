@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 04:48:58 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/10 13:51:26 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/11 07:02:43 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,10 @@ int	main(int argc, char *argv[])
 	print_stack(stack_b);
 	printf(" ########################################################################################################### \n");
 	printf(" 																											 \n");
-	printf("			 				ROTATE													 \n");
+	printf("			 				PUSH_A_TO_B													 \n");
 	printf("                                                                                                           	 \n");
 	printf(" ########################################################################################################### \n");
-	rra(&stack_a);
-	print_stack(stack_a);
-	rrb(&stack_b);
-	print_stack(stack_b);
-	rrr(&stack_a, &stack_b);
+	push_a_to_b (&stack_a, &stack_b);
 	print_stack(stack_a);
 	print_stack(stack_b);
 
