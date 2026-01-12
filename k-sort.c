@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 12:58:10 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/11 11:17:51 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/11 23:55:51 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,21 @@ void	push_a_to_b(t_stack **stack_a, t_stack **stack_b)
 	i = 0;
 	size = ft_stack_size(*stack_a);
 	k = get_k(size);
-	while (*stack_a)
+	while ((*stack_a)->next != NULL)
 	{
-		if ((*stack_a)->index <= k)
+		if ((*stack_a)->index <= i)
 		{
-			pa(stack_a, stack_b);
-			i++;
+			pb(stack_a, stack_b);
+			if ((*stack_a)->index > (k + i))
+				rr(stack_a, stack_b);
+			else
+				rb(stack_b);
 		}
-		else if ((*stack_b)->index <= (k + i) && (*stack_a)->index > k)
-		{
-			rr(stack_a, stack_b);
-			i++;
-		}
-		else if ((*stack_b)->index <= (k + i))
-		{
+		else if ((*stack_a)->index <= (k + i))
+			pb(stack_a, stack_b);
+		else if ((*stack_a)->index >= (k + i))
 			ra(stack_a);
-			i++;
-		}
+		i++;
 	}
 }
 

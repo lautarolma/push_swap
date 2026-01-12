@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 04:48:58 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/11 07:02:43 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/11 23:48:47 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,9 @@ int	main(int argc, char *argv[])
 	printf("			 				PUSH_A_TO_B													 \n");
 	printf("                                                                                                           	 \n");
 	printf(" ########################################################################################################### \n");
-	push_a_to_b (&stack_a, &stack_b);
+	push_a_to_b(&stack_a, &stack_b);
 	print_stack(stack_a);
 	print_stack(stack_b);
-
 	return (0);
 }
 
