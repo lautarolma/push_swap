@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 14:43:10 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/09 18:48:35 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/12 14:34:37 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	rev_rotate(t_stack **stack)
 	t_stack		*last;
 	t_stack		*second_last;
 
+	if (!*stack || !(*stack)->next)
+		return ;
 	first = *stack;
 	second_last = *stack;
 	while (second_last->next->next)

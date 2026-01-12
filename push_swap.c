@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 04:48:58 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/11 23:48:47 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/12 14:35:42 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ int	main(int argc, char *argv[])
 		str_manager(argv[i], &stack_a, delim);
 		i++;
 	}
-	ft_snode_add_back(&stack_b, ft_snode_new(10));
-    ft_snode_add_back(&stack_b, ft_snode_new(20));
-    ft_snode_add_back(&stack_b, ft_snode_new(30));
+	//ft_snode_add_back(&stack_b, ft_snode_new(10));
+    //ft_snode_add_back(&stack_b, ft_snode_new(20));
+    //ft_snode_add_back(&stack_b, ft_snode_new(30));
 	ft_nodes_index(stack_a);
 	ft_nodes_index(stack_b);
 	printf(" ########################################################################################################### \n");
@@ -62,7 +62,11 @@ int	main(int argc, char *argv[])
 	printf("                                                                                                           	 \n");
 	printf(" ########################################################################################################### \n");
 	push_a_to_b(&stack_a, &stack_b);
+	ft_nodes_index(stack_a);
+	ft_nodes_index(stack_b);
+	printf("stack_a·\n");
 	print_stack(stack_a);
+	printf("stack_b\n");
 	print_stack(stack_b);
 	return (0);
 }

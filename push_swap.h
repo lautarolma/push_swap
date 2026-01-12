@@ -24,7 +24,7 @@ void		str_manager(char *argv, t_stack **stack_a, char *delim);
 void		exit_with_error(t_stack **stack_a);
 void		ft_snode_add_back(t_stack **lst, t_stack *new);
 void		ft_nodes_index(t_stack *stack);
-void		ft_push(t_stack **stack_b, t_stack **stack_a);
+void		ft_push(t_stack **src, t_stack **dst);
 void		pa(t_stack **stack_b, t_stack **stack_a);
 void		pb(t_stack **stack_a, t_stack **stack_b);
 void		ft_swap(t_stack **stack);
@@ -39,7 +39,7 @@ void		rev_rotate(t_stack **stack);
 void		rra(t_stack **stack_a);
 void		rrb(t_stack **stack_b);
 void		rrr(t_stack **stack_a, t_stack **stack_b);
-void		push_a_to_b(t_stack **stack_a, t_stack **stack_b);	
+void		push_a_to_b(t_stack **src, t_stack **dst);	
 t_stack		*ft_snode_new(int content);
 t_stack		*get_next_min(t_stack *stack);
 

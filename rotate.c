@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 14:17:15 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/12 00:03:58 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/12 14:27:52 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	rotate(t_stack **stack)
 {
 	t_stack		*first;
 
-	if (!stack || !*stack)
+	if (!stack || !(*stack)->next)
 		return ;
 	first = *stack;
 	*stack = first->next;
