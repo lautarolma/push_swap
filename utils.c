@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 15:37:35 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/07 16:35:25 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/13 14:05:03 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,19 @@ int		ft_stack_size(t_stack *stack)
 		stack = stack->next;
 	}
 	return (size);
+}
+
+int		get_pos_of_index(t_stack *stack, int target_index)
+{
+	int		pos;
+
+	pos = 0;
+	while (stack)
+	{
+		if (stack->index == target_index)
+			return(pos);
+		pos++;
+		stack = stack->next;
+	}
+	return (-1);
 }

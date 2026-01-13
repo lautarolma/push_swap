@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 04:48:58 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/12 14:35:42 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/13 14:30:27 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,11 @@ int	main(int argc, char *argv[])
 	t_stack	*stack_a = NULL;
 	t_stack	*stack_b = NULL;
 	char	*delim = " ";
-	int i;
-	i = 1;
+	int 	i;
+	int		max_index_pos;
+	int		size;
 
+	i = 1;
 	if (argc < 2)
 		return (0);
 	while (i < argc)
@@ -44,30 +46,16 @@ int	main(int argc, char *argv[])
 		str_manager(argv[i], &stack_a, delim);
 		i++;
 	}
-	//ft_snode_add_back(&stack_b, ft_snode_new(10));
-    //ft_snode_add_back(&stack_b, ft_snode_new(20));
-    //ft_snode_add_back(&stack_b, ft_snode_new(30));
 	ft_nodes_index(stack_a);
-	ft_nodes_index(stack_b);
-	printf(" ########################################################################################################### \n");
-	printf(" 																						\n");
-	printf(" 							Stacks													\n");
-	printf("                                                                                        \n");
-	printf(" ########################################################################################################### \n");
-	print_stack(stack_a);
-	print_stack(stack_b);
-	printf(" ########################################################################################################### \n");
-	printf(" 																											 \n");
-	printf("			 				PUSH_A_TO_B													 \n");
-	printf("                                                                                                           	 \n");
-	printf(" ########################################################################################################### \n");
 	push_a_to_b(&stack_a, &stack_b);
-	ft_nodes_index(stack_a);
-	ft_nodes_index(stack_b);
 	printf("stack_a·\n");
-	print_stack(stack_a);
 	printf("stack_b\n");
+	size = (ft_stack_size(stack_b)- 1);
 	print_stack(stack_b);
+	rb(&stack_b);
+	max_index_pos = get_pos_of_index(stack_b, size);
+	printf("max index position%d", max_index_pos);
+	
 	return (0);
 }
 

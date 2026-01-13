@@ -18,6 +18,7 @@ typedef struct s_stack
 
 int			ft_stack_size(t_stack *stack);
 int			get_k(int n_stack);
+int			get_pos_of_index(t_stack *stack, int target_index);
 int			ft_atoi_safe(const char *s, bool *error);
 bool		is_duplicated(t_stack *stack_a, int value);
 void		str_manager(char *argv, t_stack **stack_a, char *delim);
@@ -42,5 +43,6 @@ void		rrr(t_stack **stack_a, t_stack **stack_b);
 void		push_a_to_b(t_stack **src, t_stack **dst);	
 t_stack		*ft_snode_new(int content);
 t_stack		*get_next_min(t_stack *stack);
+t_stack		*get_next_max(t_stack *stack);
 
 #endif
