@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 12:58:10 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/13 12:38:21 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/15 12:46:58 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,30 @@ int		get_k(int n_stack)
 	if (n_stack <= 100)
 		return (15);
 	if (n_stack <= 500)
-		return(15 + (n_stack - 100 * (30-15) / (500-100)));
-	return (30 + (n_stack - 500) / 25);
+		return(35);
+	return (45);
 }
-/*
+
 void	push_b_to_a(t_stack **src, t_stack **dst)
 {
-	t_stack	*max;
+	t_stack	*max_index;
 	int		size;
-
-	size = ft_stack_size(stack_b);
+	int		max_pos;
 	
-}*/
+
+	while (*src)
+	{
+		size = ft_stack_size(*src);
+		max_index = get_next_max(*src);
+		max_pos = get_pos_of_index(*src, max_index->index);
+		while(max_index != *src)
+		{
+			if (max_pos <= (size / 2))
+				rb(src);
+			else
+				rrb(src);
+			max_pos--;
+ 		}
+		pa(src, dst);
+	}
+}
