@@ -38,7 +38,7 @@ bool	is_duplicated(t_stack *stack_a, int nb)
 	return (false);
 }
 
-void	str_manager(char *argv, t_stack **stack_a, char *delim)
+void	arg_manager(char *argv, t_stack **stack_a, char *delim)
 {
 	char		*token;
 	int			nb;

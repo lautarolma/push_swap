@@ -25,7 +25,9 @@ int	main(int argc, char *argv[])
 		return (0);
 	while (i < argc)
 	{
-		str_manager(argv[i], &stack_a, delim);
+		arg_manager(argv[i], &stack_a, delim);
+		if (!stack_a)
+			return (1);
 		i++;
 	}
 	if (it_is_sort(stack_a) == false)
@@ -34,6 +36,7 @@ int	main(int argc, char *argv[])
 		push_a_to_b(&stack_a, &stack_b);
 		push_b_to_a(&stack_b, &stack_a);
 	}
+	clean_stack(&stack_a, &stack_b);
 	return (0);
 }
 
@@ -51,7 +54,7 @@ bool	it_is_sort(t_stack *stack_a)
 
 /*
 void	print_stack(t_stack *head)
-{
+
 	int		i;
 
 	i = 0;

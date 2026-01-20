@@ -7,7 +7,7 @@
 
 NAME        = push_swap
 CC          = cc
-CFLAGS      = -Wall -Wextra -Werror -I. -I$(LIBFT_DIR) -g3
+CFLAGS      = -Wall -Wextra -Werror -I. -I$(LIBFT_DIR)
 
 # == Sources ================================================================= #
 

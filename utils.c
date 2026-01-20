@@ -25,21 +25,21 @@ t_stack	*ft_snode_new(int nb)
 	return (new_node);
 }
 
-void	ft_snode_add_back(t_stack **lst, t_stack *new)
+void	ft_snode_add_back(t_stack **lst, t_stack *new_node)
 {
 	t_stack	*last;
 
-	if (!lst || !new)
+	if (!lst || !new_node)
 		return ;
 	if (!*lst)
 	{
-		*lst = new;
+		*lst = new_node;
 		return ;
 	}
 	last = *lst;
 	while (last->next)
 		last = last->next;
-	last->next = new;
+	last->next = new_node;
 }
 
 int		ft_stack_size(t_stack *stack)

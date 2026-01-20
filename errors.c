@@ -18,10 +18,10 @@ void	exit_with_error(t_stack **stack_a)
 	t_stack	*current;
 
 	if (stack_a == NULL || *stack_a == NULL)
-    {
-        write(2, "Error\n", 6);
-        exit(1);
-    }
+	{
+		 write(2, "Error\n", 6);
+		 exit(1);
+	}
 	current = *stack_a;
 	while (current)
 	{
@@ -32,4 +32,30 @@ void	exit_with_error(t_stack **stack_a)
 	*stack_a = NULL;
 	write(2, "Error\n", 6);
 	exit(1);
+}
+void	clean_stack(t_stack **stack_a, t_stack **stack_b)
+{
+	if (stack_b != NULL || *stack_b !=  NULL)
+	{
+		free_stack(stack_b);
+	}
+	if (stack_a != NULL || *stack_a !=  NULL)
+	{
+		free_stack(stack_a);
+	}
+}
+
+void	free_stack(t_stack **stack)
+{
+	t_stack	*tmp;
+	t_stack	*current;
+
+	current = *stack;
+	while (current)
+	{
+		tmp = current->next;
+		free(current);
+		current = tmp;
+	}
+	*stack = NULL;
 }
