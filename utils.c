@@ -57,17 +57,13 @@ int		ft_stack_size(t_stack *stack)
 	return (size);
 }
 
-int		get_pos_of_index(t_stack *stack, int target_index)
+int		get_k(int n_stack)
 {
-	int		pos;
-
-	pos = 0;
-	while (stack)
-	{
-		if (stack->index == target_index)
-			return(pos);
-		pos++;
-		stack = stack->next;
-	}
-	return (-1);
+	if (n_stack <= 10)
+		return (2);
+	if (n_stack <= 100)
+		return (15);
+	if (n_stack <= 500)
+		return(35);
+	return (45);
 }

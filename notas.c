@@ -1,3 +1,15 @@
+
+
+
+
+GO TO THE END
+
+
+
+
+
+
+
 Manguita dijo que anote todo. Hacele caso.
 	"v" Tengo que mutear en el strchr el hecho de separadores mas alla que el ' '. //Estaba bien gestionado, solo debia ajustar al subject
 	"v" El caso de string vacio o con solo espacios, debe tambien de tomarse como error. // Esto estaba en el arg_parse en check de !token
@@ -70,3 +82,12 @@ pa
 Esas rotaciones (rb y luego rrb) indican que tu "perrito" está trabajando bien: decide si ir por el camino corto (arriba) o por el largo (abajo).
 
 ¿Cuál es tu siguiente paso? Si quieres reducir aún más, te recomiendo implementar la lógica de "buscar el más grande y el segundo más grande" en push_b_to_a.
+
+
+
+Now:
+1- tengo que buscar el max_index con get_next_max();
+2- A partir del max_index busco el anterior, y lo declaro+asigno como (max_index - 1)
+3- llamo a get_pos_of_index (stack, index - 1); y creo un if para last-lastposition, en el que si lo encuentro. Aqui esta el analizis de esta funcion. Guardo un puntero tmp en el que apunto la busqueda en la que me quedé y empiezo a tirar de rotates? Cuanto busco? y a partir de que pusheo a A, como continuo con el proceso de busqueda del max_index?.
+4- una vez pusheado el last- lastindex, debo pushear el lastindex y hacer swap de a.
+continuo con el siguiente next.

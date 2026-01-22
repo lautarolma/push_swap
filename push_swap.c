@@ -30,12 +30,15 @@ int	main(int argc, char *argv[])
 			return (1);
 		i++;
 	}
-	if (it_is_sort(stack_a) == false)
-	{
-		ft_nodes_index(stack_a);
-		push_a_to_b(&stack_a, &stack_b);
-		push_b_to_a(&stack_b, &stack_a);
-	}
+	if (it_is_sort(stack_a))
+		return (0);
+	ft_nodes_index(stack_a);
+	if (ft_stack_size(stack_a) <= 3)
+		sort_three(&stack_a);
+	else if (ft_stack_size(stack_a) <= 5)
+		sort_five(&stack_a, &stack_b);
+	else
+		k_sort(&stack_a, &stack_b);
 	clean_stack(&stack_a, &stack_b);
 	return (0);
 }

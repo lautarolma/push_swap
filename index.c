@@ -60,3 +60,18 @@ t_stack	*get_next_max(t_stack *stack)
 	}
 	return (max_index);
 }
+
+int		get_pos_of_index(t_stack *stack, int target_index)
+{
+	int		pos;
+
+	pos = 0;
+	while (stack)
+	{
+		if (stack->index == target_index)
+			return(pos);
+		pos++;
+		stack = stack->next;
+	}
+	return (-1);
+}

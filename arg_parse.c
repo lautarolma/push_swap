@@ -22,7 +22,7 @@ int	ft_atoi_safe(const char *s, bool *error)
 		nmb = nmb * 10 + (*s++ - '0');
 		if ((sign == -1 && -nmb < INT_MIN) 
 			|| (sign == 1 && nmb > INT_MAX))
-			return (*error = true, write(2, "Number out of range\n", 20), 0);
+			return (*error = true, 0);
 	}
 	return ((int)(nmb * sign));
 }
