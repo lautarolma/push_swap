@@ -49,7 +49,8 @@ void		sort_three(t_stack **stack_a);
 void		free_stack(t_stack **stack);
 void		clean_stack(t_stack **stack_a, t_stack **stack_b);
 t_stack		*ft_snode_new(int content);
-t_stack		*get_next_min(t_stack *stack);
-t_stack		*get_next_max(t_stack *stack);
+t_stack		*get_unindexex_min(t_stack *stack);
+t_stack		*get_max_index(t_stack *stack);
+t_stack		*get_min_index(t_stack *stack);
 
 #endif

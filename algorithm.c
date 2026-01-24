@@ -12,57 +12,49 @@
 
 #include "push_swap.h"
 
-void	sort_three(t_stack **stack_a)
+void sort_three(t_stack **stack_a)
 {
-	int		first;
-	int		second;
-	int 	third;
+	int first;
+	int second;
+	int third;
 
+	if (it_is_sort(*stack_a))
+		return ;
 	first = (*stack_a)->index;
 	second = (*stack_a)->next->index;
 	third = (*stack_a)->next->next->index;
-	if (it_is_sort(*stack_a) == false)
-	{
-		if (first == 1)
-		{
-			sa(stack_a);
-			ra(stack_a);
-		}
-		if (first == 2 && second == 3)
-			rra(stack_a);
-		if (first == 3 && second == 1)
-			ra(stack_a);
-		if (second == 2)
-		{
-			sa(stack_a);
-			rra(stack_a);
-		}
-		if (third == 3)
-			sa(stack_a);
-	}
-}
+	if (first > second && first > third)
+		ra(stack_a);
+	else if (second > first && second > third)
+		rra(stack_a);
+	if ((*stack_a)->index > (*stack_a)->next->index)
+		sa(stack_a);
+} 
 
-void	sort_five(t_stack **stack_a, t_stack **stack_b)
+void sort_five(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack		*min;
-	int			pos;
-	int			size;
+	t_stack *min;
+	int pos;
+	int size;
 
-	while (size >= 3)
+	while (ft_stack_size(*stack_a) > 3)
 	{
 		size = ft_stack_size(*stack_a);
-		min = get_next_min(*stack_a);
+		min = get_min_index(*stack_a);
 		pos = get_pos_of_index(*stack_a, min->index);
 		if ((*stack_a)->index == min->index)
 			pb(stack_a, stack_b);
 		else if (pos <= (size / 2))
-			rb(stack_a);
+			ra(stack_a);
 		else
-			rrb(stack_a);
+			rra(stack_a);
 	}
 	sort_three(stack_a);
-	while (*stack_b)
-		pa(stack_a, stack_b);
+	while (ft_stack_size(*stack_b) > 0)
+	{
+		pa(stack_b, stack_a);
+		ft_stack_size(*stack_b);
+	}
 }
 
 void	k_sort(t_stack **stack_a, t_stack **stack_b)
@@ -108,7 +100,7 @@ void	push_b_to_a(t_stack **src, t_stack **dst)
 	
 	while (*src)
 	{
-		max_index = get_next_max(*src);
+		max_index = get_max_index(*src);
 		pos = get_pos_of_index(*src, max_index->index);
 		while(*src != max_index)
 		{

@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-t_stack	*get_next_min(t_stack *stack)
+t_stack	*get_unindexex_min(t_stack *stack)
 {
 	t_stack		*min_index;
 	t_stack		*current;
@@ -38,14 +38,14 @@ void	ft_nodes_index(t_stack *stack)
 	size = ft_stack_size(stack);
 	while (i < size)
 	{
-		node = get_next_min(stack);
+		node = get_unindexex_min(stack);
 		if (node)
 			node->index = i;
 		i++;
 	}
 }
 
-t_stack	*get_next_max(t_stack *stack)
+t_stack	*get_max_index(t_stack *stack)
 {
 	t_stack		*max_index;
 	t_stack		*current;
@@ -74,4 +74,20 @@ int		get_pos_of_index(t_stack *stack, int target_index)
 		stack = stack->next;
 	}
 	return (-1);
+}
+
+t_stack	*get_min_index(t_stack *stack)
+{
+	t_stack		*min_index;
+	t_stack		*current;
+
+	current = stack;
+	min_index = NULL;
+	while (current)
+	{
+		if (!min_index || current->index < min_index->index)
+			min_index = current;
+		current = current->next;
+	}
+	return (min_index);
 }

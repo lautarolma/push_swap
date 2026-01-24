@@ -31,7 +31,7 @@ int	main(int argc, char *argv[])
 		i++;
 	}
 	if (it_is_sort(stack_a))
-		return (0);
+		return (clean_stack(&stack_a, &stack_b), 0);
 	ft_nodes_index(stack_a);
 	if (ft_stack_size(stack_a) <= 3)
 		sort_three(&stack_a);
@@ -47,6 +47,8 @@ bool	it_is_sort(t_stack *stack_a)
 {
 	while (stack_a->next)
 	{
+		if (!stack_a)
+			return (true);
 		if (stack_a->value < stack_a->next->value)
 			stack_a = stack_a->next;
 		else
