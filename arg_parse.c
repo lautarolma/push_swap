@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   arg_parse.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/24 18:35:27 by laviles           #+#    #+#             */
+/*   Updated: 2026/01/24 18:40:17 by laviles          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 #include "libft/libft.h"
 
@@ -20,14 +32,14 @@ int	ft_atoi_safe(const char *s, bool *error)
 		if (!ft_isdigit(*s))
 			return (*error = true, 0);
 		nmb = nmb * 10 + (*s++ - '0');
-		if ((sign == -1 && -nmb < INT_MIN) 
-			|| (sign == 1 && nmb > INT_MAX))
+		if (((sign == -1) && (-nmb < INT_MIN))
+			|| ((sign == 1) && (nmb > INT_MAX)))
 			return (*error = true, 0);
 	}
 	return ((int)(nmb * sign));
 }
 
-bool	is_duplicated(t_stack *stack_a, int nb)	
+bool	is_duplicated(t_stack *stack_a, int nb)
 {
 	while (stack_a)
 	{

@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   k-sort.c                                           :+:      :+:    :+:   */
+/*   algorithm.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 12:58:10 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/15 12:46:58 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/24 18:34:56 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void sort_three(t_stack **stack_a)
+void	sort_three(t_stack **stack_a)
 {
-	int first;
-	int second;
-	int third;
+	int	first;
+	int	second;
+	int	third;
 
 	if (it_is_sort(*stack_a))
 		return ;
@@ -29,13 +29,13 @@ void sort_three(t_stack **stack_a)
 		rra(stack_a);
 	if ((*stack_a)->index > (*stack_a)->next->index)
 		sa(stack_a);
-} 
+}
 
-void sort_five(t_stack **stack_a, t_stack **stack_b)
+void	sort_five(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack *min;
-	int pos;
-	int size;
+	t_stack	*min;
+	int		pos;
+	int		size;
 
 	while (ft_stack_size(*stack_a) > 3)
 	{
