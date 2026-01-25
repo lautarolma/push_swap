@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 12:58:10 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/24 18:34:56 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/25 08:26:54 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,28 +66,24 @@ void	k_sort(t_stack **stack_a, t_stack **stack_b)
 void	push_a_to_b(t_stack **src, t_stack **dst)
 {
 	int		i;
-	int		size;
 	int		k;
 
 	i = 0;
-	size = ft_stack_size(*src);
-	k = get_k(size);
+	k = get_k(ft_stack_size(*src));
 	while (*src)
 	{
 		if ((*src)->index >= (k + i))
 			ra(src);
-		else if ((*src)->index <= i)
+		else
 		{
 			pb(src, dst);
-			if (*src && (*src)->index > (k + i))
-				rr(src, dst);
-			else
-				rb(dst);
-			i++;
-		}
-		else if ((*src)->index <= (k + i))
-		{
-			pb(src, dst);
+			if ((*src)->index <= i)
+			{
+				if (*src && (*src)->index > (k + i))
+					rr(src, dst);
+				else
+					rb(dst);
+			}
 			i++;
 		}
 	}

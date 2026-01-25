@@ -1,0 +1,4 @@
+PENDIENTES PUSH_SWAP
+
+1- Control de seguridad de punteros en todas las funciones.	
+
