@@ -3,14 +3,13 @@ This project has been created as part of the 42 curriculum by <laviles>.
 # 🔄 Push_swap
 
 ### Because Swap_push isn’t as natural
+### Because Swap_push isn’t as natural
 
 <p align="center">
-<img src="[https://img.shields.io/badge/Score-125%2F100-success?style=for-the-badge&logo=42](https://img.shields.io/badge/Score-125%2F100-success?style=for-the-badge&logo=42)" alt="Score 125/100">
-<img src="[https://img.shields.io/badge/Language-C-blue?style=for-the-badge&logo=c](https://img.shields.io/badge/Language-C-blue?style=for-the-badge&logo=c)" alt="Language C">
-<img src="[https://img.shields.io/badge/Status-Completed-success?style=for-the-badge](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)" alt="Status Completed">
+    <img src="https://img.shields.io/badge/Score-125%2F100-success?style=for-the-badge&logo=42" alt="Score 125/100">
+    <img src="https://img.shields.io/badge/Language-C-blue?style=for-the-badge&logo=c" alt="Language C">
+    <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Status Completed">
 </p>
-
----
 
 **Push_swap** is an algorithmic project that involves sorting a stack of data using an auxiliary stack and a limited set of instructions. The main objective is to design and implement an efficient algorithm in C that achieves the sort with the minimum number of operations.
 
