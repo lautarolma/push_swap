@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 19:12:13 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/09 11:40:26 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/25 10:12:11 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_swap(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*second;
-	
 
 	if (!stack || !(*stack)->next)
 		return ;

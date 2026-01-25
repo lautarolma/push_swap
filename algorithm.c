@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 12:58:10 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/25 08:34:01 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/25 11:28:21 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,15 @@ void	sort_five(t_stack **stack_a, t_stack **stack_b)
 
 void	k_sort(t_stack **stack_a, t_stack **stack_b)
 {
-	push_a_to_b(stack_a, stack_b);
-	push_b_to_a(stack_b, stack_a);
+	if (ft_stack_size(*stack_a) <= 3)
+		sort_three(stack_a);
+	else if (ft_stack_size(*stack_a) <= 5)
+		sort_five(stack_a, stack_b);
+	else
+	{
+		push_a_to_b(stack_a, stack_b);
+		push_b_to_a(stack_b, stack_a);
+	}
 }
 
 void	push_a_to_b(t_stack **src, t_stack **dst)
@@ -95,12 +102,12 @@ void	push_b_to_a(t_stack **src, t_stack **dst)
 {
 	t_stack	*max_index;
 	int		pos;
-	
+
 	while (*src)
 	{
 		max_index = get_max_index(*src);
 		pos = get_pos_of_index(*src, max_index->index);
-		while(*src != max_index)
+		while (*src != max_index)
 		{
 			if ((*src)->index == max_index->index - 1)
 				pa(src, dst);
@@ -108,7 +115,7 @@ void	push_b_to_a(t_stack **src, t_stack **dst)
 				rb(src);
 			else
 				rrb(src);
- 		}
+		}
 		pa(src, dst);
 		if ((*dst)->next && (*dst)->index > (*dst)->next->index)
 			sa(dst);

@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 11:13:00 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/12 14:30:55 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/25 11:35:07 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 void	ft_push(t_stack **src, t_stack **dst)
 {
 	t_stack	*tmp;
-	
 
-	if (!src || !*src) 
+	if (!src || !*src)
 		return ;
 	tmp = *src;
 	*src = (*src)->next;

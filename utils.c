@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 15:37:35 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/13 14:05:03 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/25 10:11:46 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	ft_snode_add_back(t_stack **lst, t_stack *new_node)
 	last->next = new_node;
 }
 
-int		ft_stack_size(t_stack *stack)
+int	ft_stack_size(t_stack *stack)
 {
 	int		size;
 
@@ -57,13 +57,13 @@ int		ft_stack_size(t_stack *stack)
 	return (size);
 }
 
-int		get_k(int n_stack)
+int	get_k(int n_stack)
 {
 	if (n_stack <= 10)
 		return (2);
 	if (n_stack <= 100)
 		return (15);
 	if (n_stack <= 500)
-		return(35);
+		return (35);
 	return (45);
 }

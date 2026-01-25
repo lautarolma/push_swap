@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/25 10:12:37 by laviles           #+#    #+#             */
+/*   Updated: 2026/01/25 10:13:08 by laviles          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -14,7 +26,7 @@ typedef struct s_stack
 	int				value;
 	int				index;
 	struct s_stack	*next;
-} t_stack;
+}	t_stack;
 
 int			ft_stack_size(t_stack *stack);
 int			get_k(int n_stack);
