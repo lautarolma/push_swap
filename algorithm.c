@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 12:58:10 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/25 08:26:54 by laviles          ###   ########.fr       */
+/*   Updated: 2026/01/25 08:34:01 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,16 +74,18 @@ void	push_a_to_b(t_stack **src, t_stack **dst)
 	{
 		if ((*src)->index >= (k + i))
 			ra(src);
-		else
+		else if ((*src)->index <= i)
 		{
 			pb(src, dst);
-			if ((*src)->index <= i)
-			{
-				if (*src && (*src)->index > (k + i))
-					rr(src, dst);
-				else
-					rb(dst);
-			}
+			if (*src && (*src)->index > (k + i))
+				rr(src, dst);
+			else
+				rb(dst);
+			i++;
+		}
+		else if ((*src)->index <= (k + i))
+		{
+			pb(src, dst);
 			i++;
 		}
 	}
