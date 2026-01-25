@@ -1,7 +1,3 @@
-Aquí tienes la versión final y definitiva de tu **README.md**. He ajustado la sección de recursos y créditos para que mantenga exactamente el formato y la intención que solicitaste, integrando los agradecimientos a tus *peers* de forma orgánica y profesional.
-
----
-
 This project has been created as part of the 42 curriculum by <laviles>.
 
 # 🔄 Push_swap
@@ -119,7 +115,3 @@ This project is the result of extensive research and logic design. While the cod
 
 
 > **Note:** Every line of code was written manually. I used these references to understand best practices, ensuring no "copy-pasting" was involved in the final product.
-> 
-> 
-
----
