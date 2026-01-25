@@ -21,8 +21,7 @@ The project focuses on:
 * **Algorithm Complexity**: Movement optimization to meet specific performance requirements ( or similar).
 
 
-* 
-**Data Classification**: Implementing sorting logic adapted to specific constraints.
+* **Data Classification**: Implementing sorting logic adapted to specific constraints.
 
 
 
@@ -30,20 +29,16 @@ The project focuses on:
 
 We have two stacks (**a** and **b**) and a specific instruction set:
 
-* 
-**Push (`pa`, `pb`)**: Move the top element from one stack to another.
+* **Push (`pa`, `pb`)**: Move the top element from one stack to another.
 
 
-* 
-**Swap (`sa`, `sb`)**: Swap the first two elements at the top of a stack.
+* **Swap (`sa`, `sb`)**: Swap the first two elements at the top of a stack.
 
 
-* 
-**Rotate (`ra`, `rb`)**: Shift up all elements by 1; the first becomes the last.
+* **Rotate (`ra`, `rb`)**: Shift up all elements by 1; the first becomes the last.
 
 
-* 
-**Reverse Rotate (`rra`, `rrb`)**: Shift down all elements by 1; the last becomes the first.
+* **Reverse Rotate (`rra`, `rrb`)**: Shift down all elements by 1; the last becomes the first.
 
 
 
@@ -57,8 +52,7 @@ Unlike common implementations that rely on `ft_strjoin` and `ft_split`, I develo
 
 * **Direct Stack Building**: My logic extracts values, validates them, and builds the stack simultaneously.
 * **Evolution of Knowledge**: Having recently finished *Get_next_line*, I implemented a "get_next_number" logic. This allowed me to master the use of **static variables** and reinforce my heap memory management and pointer manipulation skills.
-* 
-**Hybrid Input Support**: The parser is robust enough to handle multiple formats—quoted strings, individual arguments, or mixed inputs —using a custom `strtok` implementation.
+* **Hybrid Input Support**: The parser is robust enough to handle multiple formats—quoted strings, individual arguments, or mixed inputs —using a custom `strtok` implementation.
 
 
 
@@ -91,8 +85,7 @@ This project is the result of extensive research and logic design. While the cod
 
 * **Logic & Strategy:**
 * **YouTube:** [Oceano - Push_swap project](https://youtu.be/OaG81sDEpVk?si=JppUGYoOw63sNEax).
-* 
-**AI Mentorship:** **Gemini** & **ChatGPT** were utilized for strategic tutoring, algorithm conceptualization, and README formatting.
+* **AI Mentorship:** **Gemini** & **ChatGPT** were utilized for strategic tutoring, algorithm conceptualization, and README formatting.
 
 
 
