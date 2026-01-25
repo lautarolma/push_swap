@@ -15,12 +15,10 @@ This project has been created as part of the 42 curriculum by <laviles>.
 
 The project focuses on:
 
-* 
-**Stack Management**: Implementation of dynamic data structures.
+* **Stack Management**: Implementation of dynamic data structures.
 
 
-* 
-**Algorithm Complexity**: Movement optimization to meet specific performance requirements ( or similar).
+* **Algorithm Complexity**: Movement optimization to meet specific performance requirements ( or similar).
 
 
 * 
