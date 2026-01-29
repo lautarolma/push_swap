@@ -19,7 +19,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdbool.h>
-# include "libft/libft.h"
+# include "libft.h"
 
 typedef struct s_stack
 {

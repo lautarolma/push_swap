@@ -36,11 +36,11 @@ void	exit_with_error(t_stack **stack_a)
 
 void	clean_stack(t_stack **stack_a, t_stack **stack_b)
 {
-	if (stack_b != NULL || *stack_b != NULL)
+	if (stack_b != NULL)
 	{
 		free_stack(stack_b);
 	}
-	if (stack_a != NULL || *stack_a != NULL)
+	if (stack_a != NULL)
 	{
 		free_stack(stack_a);
 	}
