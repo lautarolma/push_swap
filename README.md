@@ -85,9 +85,9 @@ This project is the result of extensive research and logic design. While the cod
 
 * **Logic & Strategy:**
 * **YouTube:** [Oceano - Push_swap project](https://youtu.be/OaG81sDEpVk?si=JppUGYoOw63sNEax).
-* **AI Mentorship:** **Gemini** & **ChatGPT** were utilized for strategic tutoring, algorithm conceptualization, and README formatting.
-
-
+* **AI Mentorship & Usage:** **Gemini** & **ChatGPT** were utilized for strategic tutoring, algorithm conceptualization, and README formatting.
+* Strategic Tutoring: Used to understand the mathematical logic behind the k-sort algorithm and the efficiency of different chunk sizes based on the number of elements
+* Documentation: Used to help structure and format this README to ensure it meets the clarity standards for peers and recruiters.
 
 
 * **Technical References:**
