@@ -44,12 +44,12 @@ $(NAME): $(OBJS) $(LIBFT)
 
 clean:
 	@rm -f $(OBJS)
-	@$(MAKE) -C $(LIBFT_DIR) clean
+	@$(MAKE) -s -C $(LIBFT_DIR) clean
 	@echo "Objects removed."
 
 fclean: clean
 	@rm -f $(NAME)
-	@$(MAKE) -C $(LIBFT_DIR) fclean
+	@$(MAKE) -s -C $(LIBFT_DIR) fclean
 	@echo "Executable and libraries removed."
 
 re: fclean all
