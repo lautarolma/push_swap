@@ -1,4 +1,6 @@
 PENDIENTES PUSH_SWAP
 
-1- Control de seguridad de punteros en todas las funciones.	
+1- PASAR NORMINETTE a todo el projecto 
+2- Copiar todos los sorces al repo
+3- Actualizar el readme con las intrucciones para clonar, actualizar e iniciar los submodulos de la libft, gnl y printf.
 
