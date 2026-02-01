@@ -39,20 +39,6 @@ int	main(int argc, char *argv[])
 	return (0);
 }
 
-bool	it_is_sort(t_stack *stack_a)
-{
-	while (stack_a->next)
-	{
-		if (!stack_a)
-			return (true);
-		if (stack_a->value < stack_a->next->value)
-			stack_a = stack_a->next;
-		else
-			return (false);
-	}
-	return (true);
-}
-
 /*
 void	print_stack(t_stack *head)
 
