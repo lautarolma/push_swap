@@ -1,23 +1,40 @@
 #include "push_swap.h"
 
-static	void execute_command(char *line, t_stack **a, t_stack **b)
+static	void execute_command2(char *line, t_stack **a, t_stack **b)
 {
-	if (!strcmp(line, "sa\n")) sa(a);
-	else if (!ft_strncmp(line, "sb\n", sizeof(line))) sb(b);
-	else if (!strcmp(line, "ss\n")) ss(a, b);
-	else if (!strcmp(line, "pa\n")) pa(b, a);
-	else if (!strcmp(line, "pb\n")) pb(a, b);
-	else if (!strcmp(line, "ra\n")) ra(a);
-	else if (!strcmp(line, "rb\n")) rb(b);
-	else if (!strcmp(line, "rr\n")) rr(a, b);
-	else if (!strcmp(line, "rra\n")) rra(a);
-	else if (!strcmp(line, "rrb\n")) rrb(b);
-	else if (!strcmp(line, "rrr\n")) rrr(a, b);
+	if (!ft_strcmp(line, "rra\n"))
+		rra(a);
+	else if (!ft_strcmp(line, "rrb\n"))
+		rrb(b);
+	else if (!ft_strcmp(line, "rrr\n"))
+		rrr(a, b);
 	else
 	{
 		free(line);
 		exit_with_error(a);
 	}
+}
+
+static	void execute_command(char *line, t_stack **a, t_stack **b)
+{
+	if (!ft_strcmp(line, "sa\n"))
+		sa(a);
+	else if (!ft_strcmp(line, "sb\n"))
+		sb(b);
+	else if (!ft_strcmp(line, "ss\n"))
+		ss(a, b);
+	else if (!ft_strcmp(line, "pa\n"))
+		pa(b, a);
+	else if (!ft_strcmp(line, "pb\n"))
+		pb(a, b);
+	else if (!ft_strcmp(line, "ra\n"))
+		ra(a);
+	else if (!ft_strcmp(line, "rb\n"))
+		rb(b);
+	else if (!ft_strcmp(line, "rr\n"))
+		rr(a, b);
+	else
+		execute_command2(line, a, b);
 }
 
 int main(int argc, char *argv[])
