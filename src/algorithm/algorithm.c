@@ -6,7 +6,7 @@
 /*   By: laviles <laviles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 12:58:10 by laviles           #+#    #+#             */
-/*   Updated: 2026/01/25 11:28:21 by laviles          ###   ########.fr       */
+/*   Updated: 2026/02/02 18:25:23 by laviles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	sort_three(t_stack **stack_a)
 
 	if (it_is_sort(*stack_a))
 		return ;
+	if (ft_stack_size(*stack_a) == 2)
+		return (sa(stack_a));
 	first = (*stack_a)->index;
 	second = (*stack_a)->next->index;
 	third = (*stack_a)->next->next->index;
